@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo do Jogo</title>
+  <link rel="stylesheet" href="summary.css">
+</head>
+<body>
+  <h1>Resumo do Jogo</h1>
+  <div id="summary"></div>
+
+  <script>
+    const summaryData = JSON.parse(localStorage.getItem("gameSummary"));
+    if (summaryData) {
+      const summaryDiv = document.getElementById("summary");
+      summaryDiv.innerHTML = `
+        <p>Pontuação Total: ${summaryData.score}</p>
+        <p>Cliques em Flores: ${summaryData.clickData.flores}</p>
+        <p>Cliques em Pokémons: ${summaryData.clickData.pokemons}</p>
+        <p>Cliques em Ursos: ${summaryData.clickData.ursos}</p>
+        <p>Cliques em Bolo: ${summaryData.clickData.bolo}</p>
+        <p>Cliques em Balao: ${summaryData.clickData.balao}</p>
+      `;
+    } else {
+      document.body.innerHTML = "<p>Nenhum dado de jogo encontrado.</p>";
+    }
+  </script>
+  <a class="botao" href="jogo.html">Jogar dnv</a>
+  <a class="botao" href="../index.html">Voltar ao site</a>
+</body>
+</html>

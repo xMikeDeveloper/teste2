@@ -1,0 +1,135 @@
+/* Estilo global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(to bottom right, #2d2d2d, #1a1a1a);
+  color: #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+/* Seções */
+.section {
+  width: 100%;
+  max-width: 600px;
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#intro {
+  text-align: center;
+  background: rgba(26, 26, 26, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #1a1a1a;
+  border: 3px solid #4b000d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(13, 13, 13, 0.1);
+  margin-top: 20px;
+}
+
+/* Placar */
+#score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #eeeeee;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 8px 16px;
+  background: #202020;
+  border: 3px solid #868686;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botao {
+    margin-top: 3%;
+    font-size: 1.3rem;
+    /* margin-left: 1%; */
+    font-family: var(--fonte-texto);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #121212;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 1s;
+}
+
+.botao:hover {
+    background-color: rgb(139, 3, 3);
+}
+
+/* Mensagens */
+#message {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background: #ff002bc0;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 5px;
+  animation: fade-in 0.5s ease-out, pulse 1s infinite;
+  display: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 94, 120, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 94, 120, 1);
+  }
+}
+
+/* Bolo */
+#cake {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+#cake:active {
+  transform: scale(1.2);
+}
+
+#message.fade-out {
+  animation: fade-out 0.5s ease-out forwards;
+}

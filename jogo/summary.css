@@ -1,0 +1,104 @@
+/* Estilo global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(to bottom right, #2d2d2d, #1a1a1a);
+    color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Container principal */
+  .container {
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    background: rgba(26, 26, 26, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fade-in 0.8s ease-in-out;
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 2.5rem;
+    color: #ff4757;
+    margin-bottom: 20px;
+  }
+  
+  /* Estatísticas */
+  .stats {
+    margin: 20px 0;
+    padding: 15px;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stats p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  .stats p span {
+    color: #ff6348;
+    font-weight: bold;
+  }
+  
+  /* Botão Encerrar */
+  a.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #ff4757;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  a.button:hover {
+    background: #e84118;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 71, 87, 0.4);
+  }
+  
+  /* Animações */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  .botao {
+    margin-top: 3%;
+    font-size: 1.3rem;
+    /* margin-left: 1%; */
+    font-family: var(--fonte-texto);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #121212;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 1s;
+}
+
+.botao:hover {
+    background-color: rgb(139, 3, 3);
+}
